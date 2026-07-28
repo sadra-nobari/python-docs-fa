@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2001-2025, Python Software Foundation
+# Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
@@ -7,15 +7,16 @@
 # Alireza Feyzabadi Farahani, 2025
 # Alireza Shabani (Revisto) <theRevisto@gmail.com>, 2025
 # AmirHossein SAMIMI, 2025
+# khosro azimi, 2025
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Python 3.13\n"
+"Project-Id-Version: Python 3.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-18 14:18+0000\n"
+"POT-Creation-Date: 2025-07-11 14:21+0000\n"
 "PO-Revision-Date: 2021-06-28 01:49+0000\n"
-"Last-Translator: AmirHossein SAMIMI, 2025\n"
+"Last-Translator: khosro azimi, 2025\n"
 "Language-Team: Persian (https://app.transifex.com/python-doc/teams/5390/"
 "fa/)\n"
 "MIME-Version: 1.0\n"
@@ -98,10 +99,14 @@ msgid ""
 "since its object-oriented semantics are closer to those of Python than C++, "
 "but I expect that few readers have heard of it.)"
 msgstr ""
+"(با نبود اصطلاحات پذیرفته شده جهانی برای صحبت درباره کلاس‌ها، گاهی از "
+"اصطلاحات Smalltalk و C++ استفاده خواهم کرد. من از اصطلاحات Modula-3 استفاده "
+"می‌کردم، چون معنای شیءگرای آن به پایتون نزدیک‌تر از C++ است، اما انتظار دارم "
+"که تعداد کمی از خوانندگان با آن آشنا باشند.)"
 
 #: ../../tutorial/classes.rst:43
 msgid "A Word About Names and Objects"
-msgstr ""
+msgstr "سخنی درباره نام‌ها و اشیاء"
 
 #: ../../tutorial/classes.rst:45
 msgid ""
@@ -131,10 +136,15 @@ msgid ""
 "understand what's going on. Incidentally, knowledge about this subject is "
 "useful for any advanced Python programmer."
 msgstr ""
+"قبل از معرفی کلاس ها، ابتدا باید چیزی درباره قوانین حوزه  در پایتون به شما "
+"بگویم. تعریف کلاس ها چند ترفند جالب با فضاهای نام انجام می دهد و برای اینکه "
+"به طور کامل متوجه شوید چه می گذرد، باید بدانید که حوزه ها و فضاهای نام چگونه "
+"کار می کنند. ضمناً، آگاهی از این موضوع برای هر برنامه نویس پیشرفته پایتون "
+"مفید است."
 
 #: ../../tutorial/classes.rst:69
 msgid "Let's begin with some definitions."
-msgstr ""
+msgstr "بیایید با چند تعریف شروع کنیم."
 
 #: ../../tutorial/classes.rst:71
 msgid ""
@@ -150,6 +160,16 @@ msgid ""
 "may both define a function ``maximize`` without confusion --- users of the "
 "modules must prefix it with the module name."
 msgstr ""
+"«فضای نام»  *namespace* نگاشتی است از نام‌ها به اشیا. بیشتر فضای نام‌ها در حال "
+"حاضر به‌صورت دیکشنری‌های پایتون پیاده‌سازی شده‌اند، اما معمولاً این موضوع (به جز "
+"در بازدهی «performance» ) قابل مشاهده نیست و ممکن است در آینده تغییر کند. "
+"مثال‌هایی از فضای نام عبارت‌اند از: مجموعه نام‌های داخلی (که شامل توابعی مثل :"
+"func:`abs` و نام‌های استثنائات داخلی است)؛ نام‌های سراسری در یک ماژول؛ و "
+"نام‌های محلی در یک فراخوانی تابع. به نوعی، مجموعه صفات «attributes» یک شی نیز "
+"یک فضای نام را تشکیل می‌دهد. نکته مهم درباره فضای نام‌ها این است که هیچ "
+"ارتباطی بین نام‌ها در فضای نام‌های مختلف وجود ندارد؛ برای مثال، دو ماژول مختلف "
+"می‌توانند هر دو تابعی با نام ``maximize`` تعریف کنند بدون اینکه ابهامی پیش "
+"بیاید — استفاده‌کنندگان از ماژول‌ها باید نام ماژول را به عنوان پیشوند بیاورند."
 
 #: ../../tutorial/classes.rst:82
 msgid ""
@@ -161,6 +181,13 @@ msgid ""
 "happens to be a straightforward mapping between the module's attributes and "
 "the global names defined in the module: they share the same namespace!  [#]_"
 msgstr ""
+"به‌هرحال، من واژهٔ *ویژگی* «*attribute*» را برای هر نامی که بعد از یک نقطه "
+"بیاید به کار می‌برم — برای مثال، در عبارت ``z.real``, ``real`` یک ویژگیِ شیءِ "
+"``z`` است. از نظر دقیق‌تر، ارجاع به نام‌ها در ماژول‌ها نیز نوعی ارجاع به ویژگی "
+"محسوب می‌شود: در عبارت ``modname.funcname``, ``modname``  یک شیءِ ماژول است و "
+"``funcname`` یکی از ویژگی‌های آن است. در این حالت، نگاشتی ساده و مستقیم بین "
+"ویژگی‌های ماژول و نام‌های سراسری تعریف‌شده در آن وجود دارد: هر دو یک فضای نام "
+"(namespace) را به اشتراک می‌گذارند! [#]_"
 
 #: ../../tutorial/classes.rst:90
 msgid ""
@@ -171,6 +198,12 @@ msgid ""
 "remove the attribute :attr:`!the_answer` from the object named by "
 "``modname``."
 msgstr ""
+"ویژگی ها ممکن است فقط خواندنی یا قابل نوشتن باشند. در حالت دوم، اختصاص دادن "
+"به ویژگی ها ممکن است. ویژگی های ماژول قابل نوشتن هستند: می توانید ``modname."
+"the_answer = 42`` را بنویسید. ویژگی های قابل نوشتن را می توان با دستور :"
+"keyword:`del` نیز حذف کرد. به عنوان مثال، ``del modname.the_answer`` ویژگی :"
+"attr:`!the_answer` را از شیئی که توسط ``modname`` نامگذاری شده است حذف خواهد "
+"کرد."
 
 #: ../../tutorial/classes.rst:96
 msgid ""
@@ -184,6 +217,15 @@ msgid ""
 "`__main__`, so they have their own global namespace.  (The built-in names "
 "actually also live in a module; this is called :mod:`builtins`.)"
 msgstr ""
+"فضاهای نام در لحظات مختلف ایجاد می شوند و دارای طول عمرهای متفاوتی هستند. "
+"فضای نام که شامل نام های داخلی است، زمانی که مفسر پایتون شروع به کار می کند "
+"ایجاد می شود و هرگز حذف نمی شود. فضای نام عمومی برای یک ماژول زمانی که تعریف "
+"ماژول خوانده می شود ایجاد می گردد؛ به طور معمول، فضاهای نام ماژول نیز تا "
+"زمانی که مفسر پایان یابد باقی می مانند. دستوراتی که توسط اجرای سطح بالای "
+"مفسر، یا از فایل اسکریپت خوانده شده یا به طور تعاملی اجرا می شوند، به عنوان "
+"بخشی از ماژولی به نام :mod:`__main__` در نظر گرفته می شوند، بنابراین آن ها "
+"فضای نام عمومی خود را دارند. (نام‌های درون‌ساخت نیز در واقع در یک ماژول قرار "
+"دارند؛ این ماژول :mod:`builtins` نامیده می شود.)"
 
 #: ../../tutorial/classes.rst:106
 msgid ""
@@ -193,6 +235,10 @@ msgid ""
 "describe what actually happens.)  Of course, recursive invocations each have "
 "their own local namespace."
 msgstr ""
+"فضای نام محلی برای یک تابع زمانی ایجاد می‌شود که تابع فراخوانی شود و زمانی که "
+"تابع بازمی‌گردد یا استثنایی پرتاب می‌کند که در درون تابع مدیریت نمی‌شود، حذف "
+"می‌گردد. (در واقع، «فراموش شدن» توصیف بهتری برای چیزی است که واقعاً اتفاق "
+"می‌افتد.) البته، هر فراخوانی بازگشتی، فضای نام محلی خودش را دارد."
 
 #: ../../tutorial/classes.rst:112
 msgid ""
@@ -200,6 +246,10 @@ msgid ""
 "directly accessible.  \"Directly accessible\" here means that an unqualified "
 "reference to a name attempts to find the name in the namespace."
 msgstr ""
+"یک *دامنه* «*scope*» یک ناحیه متنی از یک برنامه پایتون است که در آن یک فضای "
+"نام «namespace» به طور مستقیم قابل دستیابی است. \"به طور مستقیم قابل "
+"دستیابی\" در اینجا به این معنی است که یک ارجاع بدون صلاحیت به یک نام تلاش می "
+"کند تا نام «name» را در فضای نام «namespace» پیدا کند."
 
 #: ../../tutorial/classes.rst:116
 msgid ""
@@ -515,7 +565,7 @@ msgstr ""
 
 #: ../../tutorial/classes.rst:328
 msgid ""
-"*data attributes* correspond to \"instance variables\" in Smalltalk, and to "
+"*Data attributes* correspond to \"instance variables\" in Smalltalk, and to "
 "\"data members\" in C++.  Data attributes need not be declared; like local "
 "variables, they spring into existence when they are first assigned to.  For "
 "example, if ``x`` is the instance of :class:`!MyClass` created above, the "
